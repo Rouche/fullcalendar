@@ -33,17 +33,17 @@ module.exports = {
       amd: 'jquery',
       root: 'jQuery'
     },
-    moment: 'moment',
+    moment: 'moment/moment',
 
     // moment locale files reference the moment lib with a relative require.
     // use our external reference instead.
-    '../moment': 'moment',
+    '../moment': 'moment/moment',
 
     // plugins reference the root 'fullcalendar' namespace
     fullcalendar: {
-      commonjs: 'fullcalendar',
-      commonjs2: 'fullcalendar',
-      amd: 'fullcalendar',
+      commonjs: 'fullcalendar/fullcalendar',
+      commonjs2: 'fullcalendar/fullcalendar',
+      amd: 'fullcalendar/fullcalendar',
       root: 'FullCalendar'
     }
   },

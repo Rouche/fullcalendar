@@ -1,4 +1,36 @@
 
+v3.8.0-1 (MPO)
+-------------------
+changements dans webpack.config.js
+
+```
+module.exports = {
+
+  entry: Object.assign({}, MODULES, generateLocaleMap()),
+
+  externals: {
+    jquery: {
+      commonjs: 'jquery',
+      commonjs2: 'jquery',
+      amd: 'jquery',
+      root: 'jQuery'
+    },
+    moment: 'moment/moment',
+
+    // moment locale files reference the moment lib with a relative require.
+    // use our external reference instead.
+    '../moment': 'moment/moment',
+
+    // plugins reference the root 'fullcalendar' namespace
+    fullcalendar: {
+      commonjs: 'fullcalendar/fullcalendar',
+      commonjs2: 'fullcalendar/fullcalendar',
+      amd: 'fullcalendar/fullcalendar',
+      root: 'FullCalendar'
+    }
+  },
+```
+
 v3.8.0 (2017-12-18)
 -------------------
 
